@@ -1,0 +1,26 @@
+[
+  {
+    "id": "test_1",
+    "prompt": "Check orders for CUST101",
+    "expected_tools": ["get_customer_orders"],
+    "description": "Single-step tool execution check"
+  },
+  {
+    "id": "test_2",
+    "prompt": "Give me the total combined spent by all customers in the database.",
+    "expected_tools": ["get_all_customers_spending"],
+    "description": "Global aggregation tool check"
+  },
+  {
+    "id": "test_3",
+    "prompt": "Check CUST101 details, calculate a 10% refund on their order, and email them at alice@example.com with subject 'Refund Update' and body 'Your refund is processed.'",
+    "expected_tools": ["get_customer_orders", "calculate_refund", "send_support_email"],
+    "description": "Multi-turn sequential workflow check"
+  },
+  {
+    "id": "test_4",
+    "prompt": "What is the capital of France?",
+    "expected_tools": [],
+    "description": "Zero-tool standard answer check"
+  }
+]
